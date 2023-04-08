@@ -11,3 +11,10 @@ class Config:
     AWS_ACCESS_KEY = os.getenv('AWS_ACCESS_KEY')
     AWS_REGION_NAME = os.getenv('AWS_REGION_NAME')
     AWS_BUCKET = os.getenv('AWS_BUCKET')
+
+    DB_NAME = os.getenv('DB_NAME')
+    DB_USERNAME = os.getenv('DB_USERNAME')
+    DB_PASSWORD = os.getenv('DB_PASSWORD')
+    DB_SERVER = os.getenv('DB_SERVER')
+    DB_PORT = os.getenv('DB_PORT')
+    DB_USER_PASSWORD = os.getenv('DB_USER_PASSWORD')
