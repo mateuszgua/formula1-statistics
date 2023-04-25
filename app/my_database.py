@@ -2,6 +2,9 @@ import pyodbc
 
 from config import Config
 
+pyodbc.pooling = False
+pyodbc.tracelevel = 1
+
 
 class MyDatabase:
 
@@ -10,7 +13,7 @@ class MyDatabase:
         self.user = Config.DB_USERNAME
         self.password = Config.DB_USER_PASSWORD
         self.server = Config.DB_SERVER
-        self.port = Config.DB_PORT
+        self.driver = Config.DB_DRIVER
         self.connection = None
         self.cursor = None
 
@@ -20,12 +23,10 @@ class MyDatabase:
             database = self.database
             username = self.user
             password = self.password
-            port = self.port
-            driver = '{ODBC Driver 17 for SQL Server}'
+            driver = self.driver
 
-            self.connection = pyodbc.connect(
-                f'DRIVER={driver};SERVER={server};DATABASE={database};PORT={port};UID={username};PWD={password};LoginTimeout=30;Trusted_Connection=yes;')
-
+            conn_str = f"DRIVER={driver};SERVER={server};DATABASE={database};UID={username};PWD={password}"
+            self.connection = pyodbc.connect(conn_str, autocommit=True)
             self.cursor = self.connection.cursor()
 
         except pyodbc.Error as ex:
