@@ -13,8 +13,8 @@ header, data = get_list_from_s3(file_path)
 # for eachRecord in records:
 #     print(eachRecord)
 
-df = get_df_spark(header, data)
-# print(df)
+dataframe = get_df_spark(header, data)
+dataframe.show()
 # db = MyDatabase()
 # db.get_connection()
 
