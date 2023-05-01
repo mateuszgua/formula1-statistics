@@ -15,16 +15,18 @@
 
 
 ## General Information
-- This project was created because...
+- This project was created...
 
 
 ## Technologies Used
 - Python - version xxx
-
+- Pyspark - version xxx
 
 ## Features
 List the ready features here:
-
+- Add sorce in S3 bucket, 
+- Created connection with S3 bucket,
+- Add connection with DB,
 
 ## Screenshots
 ![Example screenshot](#)
