@@ -17,13 +17,21 @@ file_path_seasons = 'data/source/seasons.csv'
 file_path_sprint_results = 'data/source/sprint_results.csv'
 file_path_status = 'data/source/status.csv'
 
-header, data = get_list_from_s3(file_path_circuits)
+# Check if table is empty, when True call bellow function:
+
+
+def transform_circuits():
+    pass
+    header, data = get_list_from_s3(file_path_circuits)
+    dataframe = get_df_spark(header, data)
+    dataframe.show()
+    # Load data to db
+    # return info?
+
+
 # headers = next(records)
 
 # print(type(records))
 # print('headers: %s' % (headers))
 # for eachRecord in records:
 #     print(eachRecord)
-
-dataframe = get_df_spark(header, data)
-dataframe.show()
