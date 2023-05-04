@@ -19,8 +19,8 @@
 
 
 ## Technologies Used
-- Python - version xxx
-- Pyspark - version xxx
+- Python - version 3.11.2
+- Pyspark - version 3.4.0
 
 ## Features
 List the ready features here:
