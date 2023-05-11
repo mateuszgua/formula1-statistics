@@ -15,7 +15,9 @@
 
 
 ## General Information
-- This project was created...
+- This project was created becouse I wanted to learn how to use PySpark. 
+- I wanted to create database in SQL Server and create ETL process.
+- I wanted learn basic Power BI function.
 
 
 ## Technologies Used
@@ -24,12 +26,13 @@
 
 ## Features
 List the ready features here:
-- Add sorce in S3 bucket, 
-- Created connection with S3 bucket,
-- Add connection with DB,
+- Creating sorce in S3 bucket, 
+- Creating connection with S3 bucket,
+- Making connection with DB,
+- Creating database and tables,
 
 ## Screenshots
-![Example screenshot](#)
+![Example screenshot](./app/static/func-diagram.png)
 
 
 ## Setup
@@ -113,4 +116,4 @@ Room for improvement:
 - 
 
 ## Contact
-Created by [@DevGua](#) - feel free to contact me!
+Created by [@DevGua](https://devgua-portfolio.web.app/) - feel free to contact me!
