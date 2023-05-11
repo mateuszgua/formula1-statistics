@@ -1,5 +1,8 @@
 from my_database import MyDatabase
 from database_manager import DatabaseManager
+from database_reader import DatabaseReader
+from transform_datas import TransformData
+from database_load_data import FillTables
 
 manager = DatabaseManager()
 
@@ -11,7 +14,18 @@ try:
     for table_name in tables_names:
         manager.is_table_exist(table_name)
 
-    # Check if table is empty then run spark code and write data to table
+    db_reader = DatabaseReader()
+    for table_name in tables_names:
+        table_is_empty = db_reader.is_empty(table_name)
+
+        if table_is_empty is True:
+            transform_data = TransformData()
+            fill_table = FillTables()
+
+            dataframe = transform_data.transform_circuits()
+            fill_table.fill_circuits(dataframe)
+        else:
+            print(f"Table: {table_name} have data")
 except:
     pass
 else:

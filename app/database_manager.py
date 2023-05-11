@@ -65,6 +65,7 @@ class DatabaseManager:
                                 alt int
                                 )""")
                     self.cursor.execute(sql_create_table)
+
                 case "constructor_results":
                     sql_create_table = (
                         f"""IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[constructor_results]') AND type in (N'U'))
@@ -76,6 +77,7 @@ class DatabaseManager:
                                 status varchar(2)
                                 )""")
                     self.cursor.execute(sql_create_table)
+
                 case "constructors":
                     sql_create_table = (
                         f"""IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[constructors]') AND type in (N'U'))
@@ -86,6 +88,7 @@ class DatabaseManager:
                                 nationality varchar(64) NOT NULL
                                 )""")
                     self.cursor.execute(sql_create_table)
+
                 case "constructor_standings":
                     sql_create_table = (
                         f"""IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[constructor_standings]') AND type in (N'U'))
@@ -98,6 +101,7 @@ class DatabaseManager:
                                 wins int NOT NULL
                                 )""")
                     self.cursor.execute(sql_create_table)
+
                 case "drivers":
                     sql_create_table = (
                         f"""IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[drivers]') AND type in (N'U'))
@@ -112,6 +116,7 @@ class DatabaseManager:
                                 nationality varchar(30) NOT NULL
                                 )""")
                     self.cursor.execute(sql_create_table)
+
                 case "driver_standings":
                     sql_create_table = (
                         f"""IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[driver_standings]') AND type in (N'U'))
@@ -124,6 +129,7 @@ class DatabaseManager:
                                 wins int NOT NULL
                                 )""")
                     self.cursor.execute(sql_create_table)
+
                 case "lap_times":
                     sql_create_table = (
                         f"""IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[lap_times]') AND type in (N'U'))
@@ -136,6 +142,7 @@ class DatabaseManager:
                                 milliseconds int NOT NULL
                                 )""")
                     self.cursor.execute(sql_create_table)
+
                 case "pit_stops":
                     sql_create_table = (
                         f"""IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[pit_stops]') AND type in (N'U'))
@@ -149,6 +156,7 @@ class DatabaseManager:
                                 milliseconds int NOT NULL
                                 )""")
                     self.cursor.execute(sql_create_table)
+
                 case "qualifying":
                     sql_create_table = (
                         f"""IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[qualifying]') AND type in (N'U'))
@@ -164,6 +172,7 @@ class DatabaseManager:
                                 q3 time(3)
                                 )""")
                     self.cursor.execute(sql_create_table)
+
                 case "races":
                     sql_create_table = (
                         f"""IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[races]') AND type in (N'U'))
@@ -177,6 +186,7 @@ class DatabaseManager:
                                 time time(2)
                                 )""")
                     self.cursor.execute(sql_create_table)
+
                 case "results":
                     sql_create_table = (
                         f"""IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[results]') AND type in (N'U'))
@@ -200,6 +210,7 @@ class DatabaseManager:
                                 statusId int
                                 )""")
                     self.cursor.execute(sql_create_table)
+
                 case "seasons":
                     sql_create_table = (
                         f"""IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[seasons]') AND type in (N'U'))
@@ -207,6 +218,7 @@ class DatabaseManager:
                                 year int NOT NULL PRIMARY KEY
                                 )""")
                     self.cursor.execute(sql_create_table)
+
                 case "sprint_results":
                     sql_create_table = (
                         f"""IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[sprint_results]') AND type in (N'U'))
@@ -228,6 +240,7 @@ class DatabaseManager:
                                 statusId int NOT NULL
                                 )""")
                     self.cursor.execute(sql_create_table)
+
                 case "status":
                     sql_create_table = (
                         f"""IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[status]') AND type in (N'U'))
