@@ -36,6 +36,7 @@ def transform_constructor_results():
 def transform_constructor_standings():
     header, data = get_list_from_s3(file_path_constructor_standings)
     dataframe = get_df_spark(header, data)
+    dataframe = dataframe.drop("positionText")
     dataframe.show()
 
 
@@ -49,6 +50,7 @@ def transform_constructor_constructors():
 def transform_driver_standings():
     header, data = get_list_from_s3(file_path_driver_standings)
     dataframe = get_df_spark(header, data)
+    dataframe = dataframe.drop("positionText")
     dataframe.show()
 
 
@@ -87,6 +89,7 @@ def transform_races():
 def transform_results():
     header, data = get_list_from_s3(file_path_results)
     dataframe = get_df_spark(header, data)
+    dataframe = dataframe.drop("positionText")
     dataframe.show()
 
 
@@ -100,6 +103,7 @@ def transform_seasons():
 def transform_sprint_results():
     header, data = get_list_from_s3(file_path_sprint_results)
     dataframe = get_df_spark(header, data)
+    dataframe = dataframe.drop("positionText")
     dataframe.show()
 
 
