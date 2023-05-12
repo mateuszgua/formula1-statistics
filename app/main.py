@@ -1,15 +1,13 @@
-from my_database import MyDatabase
 from database_manager import DatabaseManager
 from database_reader import DatabaseReader
 from transform_datas import TransformData
 from database_load_data import FillTables
 
+
 manager = DatabaseManager()
 
 tables_names = ['circuits', 'constructor_results', 'constructors', 'constructor_standings', 'drivers', 'driver_standings', 'lap_times',
                 'pit_stops', 'qualifying', 'races', 'results', 'seasons', 'sprint_results', 'status']
-# tables_names = ['results']
-# manager.drop_table('results')
 try:
     manager.is_database_exist()
 

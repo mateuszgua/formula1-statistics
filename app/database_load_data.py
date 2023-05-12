@@ -44,7 +44,7 @@ class FillTables:
         try:
             print(f"Load data in table: {table_name}")
             df_to_list = df.rdd.map(lambda x: x).collect()
-            self.cursor.fast_executemany = True
+            # self.cursor.fast_executemany = True
             self.cursor.executemany(sql, df_to_list)
             self.cursor.commit()
             self.cursor.close()
