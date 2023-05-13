@@ -8,6 +8,10 @@ config = Config()
 
 
 def get_df_spark(header, data):
-    spark = SparkSession.builder.appName('sparkdf').getOrCreate()
-    dataframe = spark.createDataFrame(data, header)
-    return dataframe
+    try:
+        spark = SparkSession.builder.appName('sparkdf').getOrCreate()
+        dataframe = spark.createDataFrame(data, header)
+    except:
+        print(f"Error with create dataframe")
+    else:
+        return dataframe
