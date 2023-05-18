@@ -30,6 +30,11 @@ List the ready features here:
 - Creating connection with S3 bucket,
 - Making connection with DB,
 - Creating database and tables,
+- Transforming data with PySpark,
+- Uploading data to SQL Server database,
+- Making connection from PowerBI to database,
+- Loading data with Power Query,
+- Making dashboard in PowerBi
 
 ## Screenshots
 ![Example screenshot](./app/static/func-diagram.png)
