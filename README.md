@@ -7,10 +7,8 @@
 * [Technologies Used](#technologies-used)
 * [Features](#features)
 * [Screenshots](#screenshots)
-* [Setup](#setup)
 * [Usage](#usage)
 * [Project Status](#project-status)
-* [Room for Improvement](#room-for-improvement)
 * [Contact](#contact)
 
 
@@ -33,6 +31,7 @@ List the ready features here:
 - Creating database and tables,
 - Transforming data with PySpark,
 - Uploading data to SQL Server database,
+- Writing tests in PyTest,
 - Making connection from Power BI to database,
 - Loading data with Power Query,
 - Making dashboard in Power Bi 📊 [_here_](https://app.powerbi.com/view?r=eyJrIjoiYWRhYjEwOGUtM2U2Yi00MTFhLWEwMGQtNjQ4N2E4ODMzYmQwIiwidCI6Ijc1NGU2OGMyLWM4NTctNDUzMC05MmMxLTRlNDQ3MWRjMDEyNCIsImMiOjl9)
@@ -41,12 +40,8 @@ List the ready features here:
 ![Example screenshot](./app/static/func-diagram.png)
 
 
-## Setup
-For start application with docker you need [Docker](https://docs.docker.com/get-docker/) and [docker-compose](https://docs.docker.com/compose/install/).
-
-
 ## Usage
-The application can be build from sources or can be run in docker.
+The application can be build from sources.
 
 ##### Build from sources
 ```bash
@@ -71,12 +66,8 @@ $
 ```
 
 ## Project Status
-Project is: in_progress
+Project is: complete
 
-
-## Room for Improvement
-Room for improvement:
-- 
 
 ## Contact
 Created by [@DevGua](https://devgua-portfolio.web.app/) - feel free to contact me!
